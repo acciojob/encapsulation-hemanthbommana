@@ -1,10 +1,16 @@
 package com.driver;
 
+
 public class Main {
-  RWOnly var = new RWOnly();
-  System.out.println(var.name);
-  var.name = "Hemanth";
-  var.setter("Hemanth");
-  System.out.println(var.getter());
-  
+    public static void main(String[] args) {
+        RWOnly obj = new RWOnly();
+
+        // obj.name = "Hemanth"; // ❌ Not allowed
+
+        // ✅ Set using setter
+        obj.setName("Hemanth");
+
+        // ✅ Get using getter
+        System.out.println(obj.getName()); // Output: Hemanth
+    }
 }
